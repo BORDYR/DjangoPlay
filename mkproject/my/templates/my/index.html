@@ -1,7 +1,7 @@
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
-        <li><a href="/my/{{ question.id }}/">{{ question.question_text }}</a></li>
+        <li><a href="{% url 'my:detail' question.id %}">{{ question.question_text }}</a></li>
     {% endfor %}
     <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css"> 
     </ul>
